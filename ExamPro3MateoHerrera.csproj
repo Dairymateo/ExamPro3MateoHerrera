@@ -63,7 +63,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="View\" />
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Repositorios\" />
 	</ItemGroup>
