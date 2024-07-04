@@ -1,5 +1,4 @@
-﻿using AVFoundation;
-using ExamPro3MateoHerrera.Modelos;
+﻿using ExamPro3MateoHerrera.Modelos;
 using Newtonsoft.Json;
 using SQLite;
 using System;
@@ -41,6 +40,15 @@ namespace ExamPro3MateoHerrera.Repositorios
             return conn.Table<Country>().ToList();
         }
 
+        public void EliminarCountry(Country country)
+        {
+            conn.Delete(country);
+        }
+
+        public void ActualizarCountry(Country country)
+        {
+            conn.Update(country);
+        }
 
 
         public CountryRepositorio (string dbPath) 

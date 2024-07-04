@@ -7,9 +7,19 @@
     Shell.FlyoutBehavior="Disabled"
     Title="ExamPro3MateoHerrera">
 
-    <ShellContent
+
+    <FlyoutItem>
+
+        <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Personaje Favorito" Icon="favorite.png">
+        <ShellContent ContentTemplate="{DataTemplate local: PersonajeFavorito}" />
+    </FlyoutItem>
+    
+    
 
 </Shell>
