@@ -31,7 +31,15 @@ namespace ExamPro3MateoHerrera.Repositorios
 
         }
 
-        public void GuardarCountry
+        public void GuardarCountry(Country country)
+        {
+            conn.Insert(country);
+        }
+
+        public List<Country> DevuelveListaCountry()
+        {
+            return conn.Table<Country>().ToList();
+        }
 
 
 
@@ -40,7 +48,7 @@ namespace ExamPro3MateoHerrera.Repositorios
             _dbPath = dbPath;
         }
 
-        public async Task <Country> DevuelveCOuntryAsync() 
+        public async Task <Country> DevuelveCountryAsync() 
         {
             HttpClient client = new HttpClient();
             var response = client.GetAsync("https://restcountries.com/v3.1/all");
